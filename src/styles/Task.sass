@@ -1,0 +1,50 @@
+@import "AllStyles"
+
+.task-item
+    max-width: 700px
+    padding: 10px
+    margin: 20px auto
+    border: solid 3px $green
+    border-radius: $borderRadius
+    text-align: center
+    word-break: break-all
+    .row
+        max-width: 700px
+.task-item.finished
+    opacity: 0.6
+    .task-name
+        font-style: italic
+
+.buttons
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    margin: auto 0
+    button
+        padding: 5px 10px
+        margin: 0 5px
+        border: none
+        border-radius: $borderRadius
+        width: 45px
+
+.modal-content
+    width: 450px
+    max-width: 95vw
+
+@media(max-width: 767px)
+    .notFinishedTasks, .finishedTasks
+        margin: 0
+        .task-item
+            margin: 10px
+            .task-name
+                padding: 0px 20px 10px
+    .buttons
+        justify-content: center
+        button
+            margin: 0 3px
+@media(max-width: 575px)
+    .buttons
+        button
+            padding: 8px 10px
+            margin: 0 10px
+            width: 50px
